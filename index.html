@@ -1,6 +1,6 @@
 <section class="fd-side-cards-natalia">
   <div class="fd-side-cards-natalia__header">
-    <div class="fd-side-cards-natalia__label">Мнение эксперта</div>
+    <div class="fd-side-cards-natalia__label">Опыт Натальи Кузнецовой</div>
     <h2>Покажите, где экономия превращается в риск</h2>
     <p>Листайте карточки, чтобы увидеть, как разобрать идею собственника: от иностранной компании до расчета доначислений и спорных льгот.</p>
   </div>
@@ -67,15 +67,11 @@
           когда принимает решения об инвестициях, дивидендах или новых проектах.
         </p>
 
-        
-
         <p>
           Если при проверке потребуется доплатить десятки миллионов рублей, эти деньги придется где-то взять.
           Такой расчет меняет разговор: собственник видит не абстрактное «опасно», а конкретную сумму,
           которая может выйти из бизнеса.
         </p>
-
-        
       </article>
 
       <article class="fd-side-cards-natalia__card fd-side-cards-natalia__card--3">
@@ -97,8 +93,6 @@
           сотрудников, структуру выручки, договоры и раздельный учет. Если компания не выполняет условия режима по существу, она не снижает налоговую нагрузку,
           а создает новый риск под видом льготы.
         </p>
-
-    
       </article>
     </div>
   </div>
@@ -208,6 +202,7 @@
 
   .fd-side-cards-natalia__content {
     min-height: 470px;
+    max-height: 530px;
     border-left: 5px solid #b38b18;
     border-radius: 18px;
     background: #ffffff;
@@ -216,8 +211,31 @@
 
   .fd-side-cards-natalia__card {
     display: none;
+    max-height: 530px;
     padding: 28px 34px 32px;
     background: #ffffff;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #b38b18 #fffaf2;
+  }
+
+  .fd-side-cards-natalia__card::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .fd-side-cards-natalia__card::-webkit-scrollbar-track {
+    background: #fffaf2;
+    border-radius: 999px;
+  }
+
+  .fd-side-cards-natalia__card::-webkit-scrollbar-thumb {
+    background: #b38b18;
+    border-radius: 999px;
+  }
+
+  .fd-side-cards-natalia__card::-webkit-scrollbar-thumb:hover {
+    background: #9f7a12;
   }
 
   .fd-side-cards-natalia__card h3 {
@@ -319,8 +337,15 @@
       min-width: 680px;
     }
 
+    .fd-side-cards-natalia__content {
+      max-height: 530px;
+    }
+
     .fd-side-cards-natalia__card {
+      max-height: 530px;
       padding: 22px 24px 26px;
+      overflow-y: auto;
+      overflow-x: hidden;
     }
 
     .fd-side-cards-natalia__card h3 {
