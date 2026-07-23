@@ -1,6 +1,6 @@
 <section class="fd-side-cards-natalia">
   <div class="fd-side-cards-natalia__header">
-    <div class="fd-side-cards-natalia__label">Опыт Натальи Кузнецовой</div>
+    <div class="fd-side-cards-natalia__label">Мнение эксперта</div>
     <h2>Покажите, где экономия превращается в риск</h2>
     <p>Листайте карточки, чтобы увидеть, как разобрать идею собственника: от иностранной компании до расчета доначислений и спорных льгот.</p>
   </div>
@@ -63,7 +63,11 @@
         <p>
           Когда мне нужно оценить риски, я беру проверяемый период и сравниваю два сценария.
           Первый — как компания платит налоги сейчас. Второй — сколько она заплатила бы, если бы работала
-          в полностью прозрачной модели. Разница между этими сценариями — потенциальная сумма риска. Именно ее собственник должен видеть,
+          в полностью прозрачной модели.
+        </p>
+
+        <p>
+          Разница между этими сценариями — потенциальная сумма риска. Именно ее собственник должен видеть,
           когда принимает решения об инвестициях, дивидендах или новых проектах.
         </p>
 
@@ -90,8 +94,8 @@
 
         <p>
           То же правило работает с другими режимами. Сначала нужно оценить фактическую деятельность,
-          сотрудников, структуру выручки, договоры и раздельный учет. Если компания не выполняет условия режима по существу, она не снижает налоговую нагрузку,
-          а создает новый риск под видом льготы.
+          сотрудников, структуру выручки, договоры и раздельный учет. Если компания не выполняет условия режима
+          по существу, она не снижает налоговую нагрузку, а создает новый риск под видом льготы.
         </p>
       </article>
     </div>
@@ -100,16 +104,21 @@
 
 <style>
   .fd-side-cards-natalia {
+    width: 100%;
     max-width: 980px;
-    margin: 40px auto;
-    padding: 24px;
+    height: 530px;
+    max-height: 530px;
+    margin: 0 auto;
+    padding: 22px;
     border: 1px solid #d8bf73;
     border-radius: 18px;
     background: #f7eddf;
     color: #050505;
     font-family: Georgia, "Times New Roman", serif;
     box-sizing: border-box;
-    overflow-x: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
 
   .fd-side-cards-natalia * {
@@ -117,11 +126,12 @@
   }
 
   .fd-side-cards-natalia__header {
-    margin-bottom: 22px;
+    flex: 0 0 auto;
+    margin-bottom: 18px;
   }
 
   .fd-side-cards-natalia__label {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     color: #b38b18;
     font-family: Arial, sans-serif;
     font-size: 13px;
@@ -131,10 +141,10 @@
   }
 
   .fd-side-cards-natalia__header h2 {
-    margin: 0 0 10px;
+    margin: 0 0 8px;
     max-width: 820px;
     color: #050505;
-    font-size: 34px;
+    font-size: 30px;
     line-height: 1.05;
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -142,10 +152,11 @@
 
   .fd-side-cards-natalia__header p {
     margin: 0;
+    max-width: 760px;
     color: #6b6255;
     font-family: Arial, sans-serif;
-    font-size: 17px;
-    line-height: 1.45;
+    font-size: 16px;
+    line-height: 1.35;
   }
 
   .fd-side-cards-natalia input {
@@ -153,31 +164,34 @@
   }
 
   .fd-side-cards-natalia__layout {
+    flex: 1 1 auto;
+    min-height: 0;
     display: grid;
-    grid-template-columns: 150px minmax(520px, 1fr);
+    grid-template-columns: 135px minmax(0, 1fr);
     gap: 14px;
-    align-items: start;
-    min-width: 720px;
+    align-items: stretch;
   }
 
   .fd-side-cards-natalia__nav {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    min-height: 0;
+    overflow: visible;
   }
 
   .fd-side-cards-natalia__nav label {
     display: flex;
     align-items: center;
     gap: 10px;
-    min-height: 50px;
-    padding: 10px;
+    min-height: 46px;
+    padding: 9px 10px;
     border: 1px solid #d8bf73;
     border-radius: 14px;
     background: #fffaf2;
     color: #2a2a2a;
     font-family: Arial, sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.2;
     cursor: pointer;
     transition: 0.2s ease;
@@ -187,9 +201,9 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    flex: 0 0 30px;
-    width: 30px;
-    height: 30px;
+    flex: 0 0 28px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     background: #b38b18;
     color: #ffffff;
@@ -201,8 +215,8 @@
   }
 
   .fd-side-cards-natalia__content {
-    min-height: 470px;
-    max-height: 530px;
+    min-height: 0;
+    height: 100%;
     border-left: 5px solid #b38b18;
     border-radius: 18px;
     background: #ffffff;
@@ -211,8 +225,8 @@
 
   .fd-side-cards-natalia__card {
     display: none;
-    max-height: 530px;
-    padding: 28px 34px 32px;
+    height: 100%;
+    padding: 24px 30px 28px;
     background: #ffffff;
     overflow-y: auto;
     overflow-x: hidden;
@@ -239,9 +253,9 @@
   }
 
   .fd-side-cards-natalia__card h3 {
-    margin: 0 0 16px;
+    margin: 0 0 14px;
     color: #b38b18;
-    font-size: 28px;
+    font-size: 27px;
     line-height: 1.15;
     font-weight: 700;
   }
@@ -255,51 +269,6 @@
 
   .fd-side-cards-natalia__card p:last-child {
     margin-bottom: 0;
-  }
-
-  .fd-side-cards-natalia__download {
-    display: flex;
-    gap: 18px;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 24px;
-    padding: 18px;
-    border: 1px solid #d8bf73;
-    border-radius: 16px;
-    background: #fffaf2;
-    font-family: Arial, sans-serif;
-  }
-
-  .fd-side-cards-natalia__download strong {
-    display: block;
-    margin-bottom: 6px;
-    color: #050505;
-    font-size: 16px;
-  }
-
-  .fd-side-cards-natalia__download p {
-    margin: 0;
-    color: #6b6255;
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-    line-height: 1.35;
-  }
-
-  .fd-side-cards-natalia__download a {
-    flex: 0 0 auto;
-    display: inline-block;
-    padding: 11px 16px;
-    border-radius: 999px;
-    background: #b38b18;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    text-decoration: none;
-  }
-
-  .fd-side-cards-natalia__download a:hover {
-    background: #9f7a12;
   }
 
   #natalia-tab-1:checked ~ .fd-side-cards-natalia__layout .fd-side-cards-natalia__card--1,
@@ -325,40 +294,58 @@
 
   @media (max-width: 760px) {
     .fd-side-cards-natalia {
-      padding: 18px;
+      height: 530px;
+      max-height: 530px;
+      padding: 16px;
+    }
+
+    .fd-side-cards-natalia__header {
+      margin-bottom: 14px;
+    }
+
+    .fd-side-cards-natalia__label {
+      font-size: 12px;
     }
 
     .fd-side-cards-natalia__header h2 {
-      font-size: 28px;
+      font-size: 24px;
+      line-height: 1.05;
+    }
+
+    .fd-side-cards-natalia__header p {
+      font-size: 14px;
+      line-height: 1.35;
     }
 
     .fd-side-cards-natalia__layout {
-      grid-template-columns: 140px 520px;
-      min-width: 680px;
+      grid-template-columns: 112px minmax(0, 1fr);
+      gap: 10px;
     }
 
-    .fd-side-cards-natalia__content {
-      max-height: 530px;
+    .fd-side-cards-natalia__nav label {
+      min-height: 42px;
+      padding: 8px;
+      font-size: 12px;
+    }
+
+    .fd-side-cards-natalia__nav label span {
+      flex: 0 0 24px;
+      width: 24px;
+      height: 24px;
+      font-size: 13px;
     }
 
     .fd-side-cards-natalia__card {
-      max-height: 530px;
-      padding: 22px 24px 26px;
-      overflow-y: auto;
-      overflow-x: hidden;
+      padding: 20px 18px 24px;
     }
 
     .fd-side-cards-natalia__card h3 {
-      font-size: 24px;
+      font-size: 23px;
     }
 
     .fd-side-cards-natalia__card p {
-      font-size: 18px;
-    }
-
-    .fd-side-cards-natalia__download {
-      flex-direction: column;
-      align-items: flex-start;
+      font-size: 17px;
+      line-height: 1.45;
     }
   }
 </style>
